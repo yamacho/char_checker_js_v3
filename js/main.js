@@ -6,4 +6,10 @@
   var LIMIT = 30;
 
   label.innerHTML = LIMIT;
+
+  comment.addEventListener('keyup', function() {
+    var remaining = LIMIT - this.value.length;
+
+    label.innerHTML = remaining;
+  });
 })();
